@@ -83,7 +83,7 @@ ORDER BY TABLE_TYPE;
 
 ## 🤝 Summary
 
-This project is logical continuation of my [Data Warehouse Project](https://github.com/Timaxrus/sql-data-warehouse-project). This repository is a comprehensive collection of SQL scripts designed for data exploration, analytics, and reporting. It includes queries for database exploration, measures and metrics, time-based trends, cumulative analytics, segmentation, and more. Tailored for data analysts and BI professionals, these scripts help quickly explore, segment, and analyze relational database data. Each script focuses on a specific analytical theme and follows SQL best practices.
+This project is logical continuation of my [Data Warehouse Project](https://github.com/Timaxrus/sql-data-warehouse-project) where I tried to demonstrate best practices of ETL. This repository is a comprehensive collection of SQL scripts designed for data exploration, analytics, and reporting demonstrating my data analytics EDA skills. It includes queries for database exploration, measures and metrics, time-based trends, cumulative analytics, and segmentation. Tailored for data analysts and BI professionals, these scripts help quickly explore, segment, and analyze relational database data. Each script focuses on a specific analytical theme and follows SQL best practices.
 
 
 ---
