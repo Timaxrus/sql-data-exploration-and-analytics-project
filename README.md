@@ -12,9 +12,7 @@ This repository is a comprehensive collection of SQL scripts designed for **data
 1. [Project Overview](#-project-overview)
 2. [Key Features](#-key-features)
 3. [Script Categories](#-script-categories)
-4. [How to Use](#-how-to-use)
-5. [Contributing](#-contributing)
-6. [License](#-license)
+4. [Acknowledgement](#-scknowledgements)
 
 ---
 
@@ -49,16 +47,17 @@ Here’s a breakdown of the SQL scripts available in this repository:
 ### 1. **Database Exploration** 🔍  
    - Explore database structures, list of tables, schemas and relationships.  
    - inspect the columns and metadata for specific tables.
-     Sample code:
-       ``` SELECT 
-    TABLE_CATALOG, 
-    TABLE_SCHEMA, 
-    TABLE_NAME, 
-    TABLE_TYPE
+
+     <br> *Code example:*
+```sql
+SELECT
+   TABLE_CATALOG, 
+   TABLE_SCHEMA, 
+   TABLE_NAME, 
+   TABLE_TYPE
 FROM INFORMATION_SCHEMA.TABLES
 ORDER BY TABLE_TYPE;
-    ```
-
+```
 ### 2. **Measures and Metrics** 📏  
    - Calculate key performance indicators (KPIs).  
    - Aggregate data using `SUM`, `AVG`, `COUNT`, etc.  
@@ -81,32 +80,10 @@ ORDER BY TABLE_TYPE;
 
 ---
 
-## 🛠️ How to Use
+## 🤝 Summary
 
-1. **Clone the Repository**:  
-   ```bash
-   git clone https://github.com/your-username/sql-data-analytics.git
-   ```
+This project is logical continuation of my [Data Warehouse Project](https://github.com/Timaxrus/sql-data-warehouse-project)  
 
-2. **Navigate to the Scripts**:  
-   Browse the scripts by category and select the one that matches your analysis needs.
-
-3. **Run the Scripts**:  
-   Copy the SQL script into your database management tool (e.g., MySQL Workbench, pgAdmin, SSMS) and execute it on your dataset.
-
-4. **Customize**:  
-   Modify the scripts as needed to fit your specific data and requirements.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! 🎉  
-If you have a SQL script that you'd like to share, feel free to open a **pull request**. Please ensure your script is well-documented and follows best practices.
-
-1. Fork the repository.  
-2. Create a new branch for your script.  
-3. Submit a pull request with a detailed description of your changes.  
 
 ---
 
@@ -116,9 +93,9 @@ This project is licensed under the **MIT License**. Feel free to use, modify, an
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgements
 
-- Inspired by real-world data analysis challenges.  
+- Inspired by [DataWithBaraa](https://github.com/DataWithBaraa).  
 - Built with ❤️ for the data community.  
 
 ---
@@ -126,5 +103,3 @@ This project is licensed under the **MIT License**. Feel free to use, modify, an
 Happy Querying! 🚀  
 
 --- 
-
-This `README.md` provides a clear and structured overview of your project while maintaining a professional tone. Let me know if you'd like to add or modify anything! 😊
