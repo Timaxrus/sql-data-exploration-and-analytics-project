@@ -22,10 +22,10 @@ This repository is a comprehensive collection of SQL scripts designed for **data
 This repository is a curated collection of SQL scripts that cover a wide range of data analysis tasks, including:
 
 - **Database Exploration** 🔍  
-- **Measures and Metrics** 📏  
-- **Time-Based Trends** 📅  
-- **Cumulative Analytics** 📈  
-- **Segmentation** 🗂️  
+- **Dimensions Exploration** 📏  
+- **Date Exploration** 📅  
+- **Measures Exploration** 📈  
+- **Magnitude and Ranking** 🗂️  
 - **And More!** 🎯  
 
 These scripts are designed to help you gain insights from your data efficiently and effectively. They are written with clarity and best practices in mind, making them easy to adapt to your own datasets.
@@ -59,25 +59,83 @@ SELECT
 FROM INFORMATION_SCHEMA.TABLES
 ORDER BY TABLE_TYPE;
 ```
-### 2. **Measures and Metrics** 📏  
-   - Calculate key performance indicators (KPIs).  
-   - Aggregate data using `SUM`, `AVG`, `COUNT`, etc.  
+### 2. **Dimensions Exploration** 📏  
+   - Explore the structure of dimension tables.  
+   - Inspect the range of unique dimensions.
+     
+     <br> *Code example:*
+```sql
+SELECT DISTINCT 
+    category, 
+    subcategory, 
+    product_name 
+FROM gold.dim_products
+ORDER BY category, subcategory, product_name;
+```
 
-### 3. **Time-Based Trends** 📅  
-   - Analyze data over time (daily, weekly, monthly).  
-   - Identify seasonality or trends.  
+### 3. **Date Exploration** 📅  
+   - Determine the temporal boundaries of key data points.
+   - Understand the range of historical data.
 
-### 4. **Cumulative Analytics** 📈  
-   - Calculate running totals and cumulative metrics.  
-   - Track progress over time.  
+     <br> *Code example:*
+```sql
+SELECT 
+    MIN(order_date) AS first_order_date,
+    MAX(order_date) AS last_order_date,
+    DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) AS order_range_months
+FROM gold.fact_sales;
+```
 
-### 5. **Segmentation** 🗂️  
-   - Group data into meaningful categories (e.g., customer segments).  
-   - Perform cohort analysis.  
+### 4. **Measures Exploration** 📈  
+   - Calculate aggregated metrics (e.g., totals, averages, sum) for quick insights.  
+   - Generate a Report that shows all key metrics of the business.
 
-### 6. **Advanced Analytics** 🚀  
-   - Use window functions, subqueries, and CTEs.  
-   - Perform complex joins and transformations.  
+     <br> *Code example:*
+```sql
+SELECT 'Total Sales' AS measure_name, SUM(sales_amount) AS measure_value FROM gold.fact_sales
+UNION ALL
+SELECT 'Total Quantity', SUM(quantity) FROM gold.fact_sales
+UNION ALL
+SELECT 'Average Price', AVG(price) FROM gold.fact_sales
+UNION ALL
+SELECT 'Total Orders', COUNT(DISTINCT order_number) FROM gold.fact_sales
+UNION ALL
+SELECT 'Total Products', COUNT(DISTINCT product_name) FROM gold.dim_products
+UNION ALL
+SELECT 'Total Customers', COUNT(customer_key) FROM gold.dim_customers;
+```
+
+### 5. **Magnitude and Ranking** 🗂️  
+   - Quantify data and group results by specific dimensions.
+   - Understanding data distribution across categories.
+
+     <br> *Code example:*
+```sql
+SELECT
+    p.category,
+    SUM(f.sales_amount) AS total_revenue
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_products p
+    ON p.product_key = f.product_key
+GROUP BY p.category
+ORDER BY total_revenue DESC;
+```
+
+### 6. **Advanced Ranking Analytics** 🚀  
+   - Rank items (e.g., products, customers) based on performance or other metrics.
+   - Identify top performers or laggards.
+
+     <br> *Code example:*
+```sql
+SELECT TOP 5
+    p.product_name,
+    SUM(f.sales_amount) AS total_revenue
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_products p
+    ON p.product_key = f.product_key
+GROUP BY p.product_name
+ORDER BY total_revenue;
+```
 
 ---
 
