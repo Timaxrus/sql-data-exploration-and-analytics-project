@@ -82,7 +82,7 @@ TRUNCATE TABLE gold.dim_customers;
 GO
 
 BULK INSERT gold.dim_customers
-FROM 'C:\sql\edl_project\gold.dim_customers.csv'
+FROM 'C:\SQL_PROJECTS\SQL_EDA_PROJECT\gold.dim_customers.csv'             -- Paster the path to the csv files on your machine
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',
@@ -94,7 +94,7 @@ TRUNCATE TABLE gold.dim_products;
 GO
 
 BULK INSERT gold.dim_products
-FROM 'C:\sql\edl_project\gold.dim_products.csv'
+FROM 'C:\SQL_PROJECTS\SQL_EDA_PROJECT\gold.dim_products.csv'              -- Paster the path to the csv files on your machine
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',
@@ -106,7 +106,7 @@ TRUNCATE TABLE gold.fact_sales;
 GO
 
 BULK INSERT gold.fact_sales
-FROM 'C:\sql\edl_project\gold.fact_sales.csv'
+FROM 'C:\SQL_PROJECTS\SQL_EDA_PROJECT\gold.fact_sales.csv'                 -- Paster the path to the csv files on your machine
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',
