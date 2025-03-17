@@ -19,7 +19,9 @@ This repository is a comprehensive collection of SQL scripts designed for **data
 
 ## � Project Overview
 
-This repository is a curated collection of SQL scripts that cover a wide range of data analysis tasks, including:
+This repository is a curated collection of SQL scripts that cover a wide range of data analysis tasks
+
+### Part 1 - Data Exploration (EDA):
 
 - **Database Exploration** 🔍  
 - **Dimensions Exploration** 📏  
@@ -27,6 +29,12 @@ This repository is a curated collection of SQL scripts that cover a wide range o
 - **Measures Exploration** 📈  
 - **Magnitude and Ranking** 🗂️  
 - **And More!** 🎯  
+
+### Part 2 - Data Analysis (Advanced):
+
+- **Change-over-time Trends** 📈
+- **Cumulativ Analysis** 📊
+- **Performance Analysis** ⚖️
 
 These scripts are designed to help you gain insights from your data efficiently and effectively. They are written with clarity and best practices in mind, making them easy to adapt to your own datasets.
 
@@ -44,6 +52,8 @@ These scripts are designed to help you gain insights from your data efficiently 
 ## 📂 Script Categories
 
 Here’s a breakdown of the SQL scripts available in this repository:
+
+### Data Exploration Queries:
 
 ### 1. **Database Exploration** 🔍  
    - Explore database structures, list of tables, schemas and relationships.  
@@ -136,6 +146,15 @@ LEFT JOIN gold.dim_products p
 GROUP BY p.product_name
 ORDER BY total_revenue;
 ```
+
+### Data Exploration Queries:
+
+
+### 1. **Change-over-time Trends** 📈
+
+
+- **Cumulativ Analysis** 📊
+- **Performance Analysis** ⚖️
 
 ---
 
