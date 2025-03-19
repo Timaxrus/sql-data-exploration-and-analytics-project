@@ -153,8 +153,17 @@ ORDER BY total_revenue;
 ### 1. **Change-over-time Trends** 📈
 
 
-- **Cumulativ Analysis** 📊
-- **Performance Analysis** ⚖️
+### 2. **Cumulativ Analysis** 📊
+
+
+### 3. **Performance Analysis** 🎯
+
+### 4. **Part to Whole** ![pie-chart](https://github.com/user-attachments/assets/4df4d564-1eaf-4804-98f2-9e63fd91db7a)
+
+
+
+
+### 5. **Data Segmentation**
 
 ---
 
